@@ -40,7 +40,7 @@ namespace DiscordExampleBot.Modules.Public
         }
 
         [Command("info")]
-        public async Task Info(IUserMessage msg)
+        public async Task Info()
         {
             var application = await Context.Client.GetApplicationInfoAsync();
             await msg.Channel.SendMessageAsync(
