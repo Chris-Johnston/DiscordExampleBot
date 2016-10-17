@@ -43,7 +43,7 @@ namespace DiscordExampleBot.Modules.Public
         public async Task Info()
         {
             var application = await Context.Client.GetApplicationInfoAsync();
-            await msg.Channel.SendMessageAsync(
+            await ReplyAsync(
                 $"{Format.Bold("Info")}\n" +
                 $"- Author: {application.Owner.Username} (ID {application.Owner.Id})\n" +
                 $"- Library: Discord.Net ({DiscordConfig.Version})\n" +
