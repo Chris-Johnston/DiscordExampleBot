@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Discord;
 using Discord.WebSocket;
@@ -22,7 +20,7 @@ namespace DiscordExampleBot
             // Define the DiscordSocketClient
             client = new DiscordSocketClient();
 
-            var token = "token here";
+            var token = "MjE5NDAxOTQyNzgxMTMyODAw.CrnLsw.RZKNEnWnVxGJzEHFcJE1e4GkoOQ";
 
             // Login and connect to Discord.
             await client.LoginAsync(TokenType.Bot, token);
