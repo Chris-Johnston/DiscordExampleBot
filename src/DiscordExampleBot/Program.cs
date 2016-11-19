@@ -20,7 +20,7 @@ namespace DiscordExampleBot
             // Define the DiscordSocketClient
             client = new DiscordSocketClient();
 
-            var token = "MjE5NDAxOTQyNzgxMTMyODAw.CrnLsw.RZKNEnWnVxGJzEHFcJE1e4GkoOQ";
+            var token = "token here";
 
             // Login and connect to Discord.
             await client.LoginAsync(TokenType.Bot, token);
