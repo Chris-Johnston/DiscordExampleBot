@@ -22,7 +22,7 @@ namespace DiscordExampleBot.Modules.Public
 
         [Command("leave")]
         [Summary("Instructs the bot to leave this Guild.")]
-        [RequirePermission(GuildPermission.ManageGuild)]
+        [RequireUserPermission(GuildPermission.ManageGuild)]
         public async Task Leave()
         {
             if (Context.Guild == null) { await ReplyAsync("This command can only be ran in a server."); return; }
