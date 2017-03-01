@@ -1,14 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26014.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D75B1621-77CC-419E-94D4-B58A985D6C94}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordExampleBot", "DiscordExampleBot\DiscordExampleBot.csproj", "{1509310A-257D-47D1-A489-0C50E8A96D7D}"
+VisualStudioVersion = 15.0.26124.0
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{13B669BE-BB05-4DDF-9536-439F39A36129}") = "DiscordExampleBot", "DiscordExampleBot\DiscordExampleBot.csproj", "{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,24 +14,21 @@ Global
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Debug|x64.ActiveCfg = Debug|x64
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Debug|x64.Build.0 = Debug|x64
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Debug|x86.ActiveCfg = Debug|x86
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Debug|x86.Build.0 = Debug|x86
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Release|x64.ActiveCfg = Release|x64
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Release|x64.Build.0 = Release|x64
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Release|x86.ActiveCfg = Release|x86
-		{1509310A-257D-47D1-A489-0C50E8A96D7D}.Release|x86.Build.0 = Release|x86
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{1509310A-257D-47D1-A489-0C50E8A96D7D} = {4AB95CE7-4F47-4D2D-8479-F1BB32975F45}
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Debug|x64.ActiveCfg = Debug|x64
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Debug|x64.Build.0 = Debug|x64
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Debug|x86.ActiveCfg = Debug|x86
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Debug|x86.Build.0 = Debug|x86
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Release|x64.ActiveCfg = Release|x64
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Release|x64.Build.0 = Release|x64
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Release|x86.ActiveCfg = Release|x86
+		{29B973A9-ABD1-4A00-81F8-4A59589BBDE2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

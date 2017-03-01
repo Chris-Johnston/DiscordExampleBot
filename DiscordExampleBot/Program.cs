@@ -24,7 +24,7 @@ namespace DiscordExampleBot
 
             // Login and connect to Discord.
             await client.LoginAsync(TokenType.Bot, token);
-            await client.ConnectAsync();
+            await client.StartAsync();
 
             var map = new DependencyMap();
             map.Add(client);
