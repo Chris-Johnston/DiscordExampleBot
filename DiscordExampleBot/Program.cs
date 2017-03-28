@@ -17,8 +17,11 @@ namespace DiscordExampleBot
 
         public async Task Start()
         {
+            // make a configuration
+            DiscordSocketConfig clientConfig = new DiscordSocketConfig() { LogLevel = LogSeverity.Info };
+
             // Define the DiscordSocketClient
-            client = new DiscordSocketClient();
+            client = new DiscordSocketClient(clientConfig);
 
             var token = "token here";
 
@@ -31,6 +34,9 @@ namespace DiscordExampleBot
 
             handler = new CommandHandler();
             await handler.Install(map);
+
+            // add logger
+            client.Log += Log;
 
             // Block this program until it is closed.
             await Task.Delay(-1);
