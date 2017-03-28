@@ -16,7 +16,6 @@ namespace DiscordExampleBot
             // Create Command Service, inject it into Dependency Map
             client = _map.Get<DiscordSocketClient>();
             commands = new CommandService();
-            _map.Add(commands);
             map = _map;
 
             await commands.AddModulesAsync(Assembly.GetEntryAssembly());
