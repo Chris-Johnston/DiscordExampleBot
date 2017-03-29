@@ -36,8 +36,19 @@ namespace DiscordExampleBot
             // add logger
             client.Log += Log;
 
+            // Log the invite URL on client ready
+            client.Ready += Client_Ready;
+
             // Block this program until it is closed.
             await Task.Delay(-1);
+        }
+
+        // log the OAuth2 Invite URL of the bot on client ready so that user can see it on startup
+        private async Task Client_Ready()
+        {
+            var application = await client.GetApplicationInfoAsync();
+            await Log(new LogMessage(LogSeverity.Info, "Program",
+                $"Invite URL: <https://discordapp.com/oauth2/authorize?client_id={application.Id}&scope=bot>"));
         }
 
         // Bare minimum Logging function for both DiscordSocketClient and CommandService
