@@ -17,11 +17,9 @@ namespace DiscordExampleBot
 
         public async Task Start()
         {
-            // make a configuration
-            DiscordSocketConfig clientConfig = new DiscordSocketConfig() { LogLevel = LogSeverity.Info };
-
-            // Define the DiscordSocketClient
-            client = new DiscordSocketClient(clientConfig);
+            
+            // Define the DiscordSocketClient with a DiscordSocketConfig
+            client = new DiscordSocketClient(new DiscordSocketConfig() { LogLevel = LogSeverity.Info });
 
             var token = "token here";
 
