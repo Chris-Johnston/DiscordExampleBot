@@ -40,7 +40,8 @@ namespace DiscordExampleBot
             await Task.Delay(-1);
         }
 
-        private Task Log(LogMessage msg)
+        // Bare minimum Logging function for both DiscordSocketClient and commands
+        public static Task Log(LogMessage msg)
         {
             Console.WriteLine(msg.ToString());
             return Task.CompletedTask;

@@ -15,6 +15,7 @@ namespace DiscordExampleBot.Modules.Public
         [Summary("Returns the OAuth2 Invite URL of the bot")]
         public async Task Invite()
         {
+            Program.Log(new LogMessage(LogSeverity.Info, "PublicModule", "Invite"));
             var application = await Context.Client.GetApplicationInfoAsync();
             await ReplyAsync(
                 $"A user with `MANAGE_SERVER` can invite me to your server here: <https://discordapp.com/oauth2/authorize?client_id={application.Id}&scope=bot>");
@@ -25,7 +26,13 @@ namespace DiscordExampleBot.Modules.Public
         [RequireUserPermission(GuildPermission.ManageGuild)]
         public async Task Leave()
         {
-            if (Context.Guild == null) { await ReplyAsync("This command can only be ran in a server."); return; }
+            Program.Log(new LogMessage(LogSeverity.Info, "PublicModule", "Leave"));
+            if (Context.Guild == null)
+            {
+                await ReplyAsync("This command can only be ran in a server.");
+                Program.Log(new LogMessage(LogSeverity.Warning, "PublicModule.Leave", "This command can only be run in a server."));
+                return;
+            }
             await ReplyAsync("Leaving~");
             await Context.Guild.LeaveAsync();
         }
@@ -35,12 +42,14 @@ namespace DiscordExampleBot.Modules.Public
         [Summary("Echos the provided input")]
         public async Task Say([Remainder] string input)
         {
+            Program.Log(new LogMessage(LogSeverity.Info, "PublicModule", "Say/Echo : " + input));
             await ReplyAsync(input);
         }
 
         [Command("info")]
         public async Task Info()
         {
+            Program.Log(new LogMessage(LogSeverity.Info, "PublicModule", "Info"));
             var application = await Context.Client.GetApplicationInfoAsync();
             await ReplyAsync(
                 $"{Format.Bold("Info")}\n" +
